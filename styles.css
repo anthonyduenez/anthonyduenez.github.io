@@ -1,0 +1,147 @@
+body{
+    background-color: rgb(34, 34, 77);
+    color: wheat;
+    font-family:'Playwrite New Zealand', sans-serif;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0px;
+}
+
+#headerContainer{
+    background-color: rgb(36, 36, 107);
+    padding: 5% 5% 2% 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#tabsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.tabContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 4px 10px;
+    text-align: center;
+    border-bottom: 1px solid rgb(115, 115, 176);
+}
+
+a {
+    color: rgb(115, 115, 176);
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    font-size: 1.1em;
+    color: whitesmoke;
+    border-bottom-color: whitesmoke;
+    transition: 0.3s;
+}
+
+#teamContainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image{ 
+    margin:10px;
+    object-fit: cover;
+}
+
+.teamImage{
+    width: 200px;
+    height: 200px;
+    border-radius:10%;
+    border: 2px solid white;
+}
+
+.pageContent{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+figure{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:10px;
+}
+
+figcaption {
+    text-align:center;
+    font-weight:bold;
+    margin: 0 auto;
+}
+
+#experienceContainer{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}
+
+table{
+    background-color: rgb(52, 52, 121);
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 1vw 2vw 1vw 2vw;
+    width: 0px;
+}
+
+th{
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-bottom: 2px solid rgb(115, 115, 176);
+}
+
+td{
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(115, 115, 176, 0.616);
+}
+
+li{
+    width: fit-content;
+}
+
+iframe{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 500px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+hr{
+    width: 75%;
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.734);
+}
+
+#csumbLogo{
+    width: 150px;
+    height: auto;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.734);
+    font-size: 1.2em;
+}
