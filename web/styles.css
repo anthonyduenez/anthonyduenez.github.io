@@ -121,7 +121,7 @@ li{
 iframe{
     display: flex;
     justify-content: center;
-    width: 75%;
+    width: 50%;
     height: 500px;
     margin: 0 auto;
     border: none;
