@@ -13,9 +13,10 @@ body{
 #navigationContainer{
     display: inline-flex;
     justify-content: space-between;
+    gap: 16px;
 }
 .hyperlinks{
-    margin: 14px 16px 0px 8px;
+    margin-top: 14px;
     padding: 7px 16px;
     text-decoration: none;
     color: whitesmoke;
