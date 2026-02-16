@@ -1,0 +1,32 @@
+body{
+    background-image: url("https://images2.alphacoders.com/304/3042.png");
+    font-size: 2em;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.395);
+    color: white;
+    text-align: center;
+}
+
+#gameContainer{
+    background-color: rgba(174, 174, 174, 0.395);
+    color: black;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    padding: 10px;
+}
+#userInput{
+    display:flex;
+    justify-content: center;
+    font-size: 75%;
+}
+#result{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background: white;
+}
+#resetBtn{
+    display: none;
+}
