@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <script src="js/script.js" defer></script>
+    
+</head>
+<body>
+    <!--Navigation-->
+    <div class="flex flex-col md:flex-row gap-2 justify-center text-xl" id="navContainer">
+        <a class="nav transition-transform duration-200 hover:scale-110" id="meTab" href="#meSection">Me</a>
+        <a class="nav transition-transform duration-200 hover:scale-110" id="projectTab">Projects</a>
+        <a class="nav transition-transform duration-200 hover:scale-110" id="socialsTab">Socials</a>
+    </div>
+    <!--Welcome Message-->
+    <div id="greetingsContainer">
+        <span class="text-[clamp(2rem,4vw,4rem)]">Hey! I am</span><br>
+        <span class="typewriter text-[clamp(2.5rem,5vw,8rem)]" id="typedText"></span>
+        <span class="typewriter text-[clamp(2.5rem,5vw,8rem)]" id="cursor">|</span>
+    </div>
+    <!--About me-->
+    <div id="meSection"></div>
+    <!--Projects-->
+    <div id="projectSection"></div>
+    <!--Socials-->
+    <div id="socialsSection"></div>
+</body>
+</html>

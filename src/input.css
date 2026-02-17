@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/font/junicode.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/font/junicode-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/font/junicode-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Junicode';
+  src: url('/font/junicode-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+:root {
+  --primary-bg-color: rgb(31, 31, 31);
+  --primary-color: rgb(209, 207, 192);
+  --secondary-bg-color: rgb(54, 54, 54);
+  --secondary-color: rgb(114, 186, 250);
+}
+
+body {
+  color: var(--primary-color);
+  font-family: 'Junicode', serif;
+  background-color: var(--primary-bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+#navContainer {
+  background-color: var(--secondary-bg-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.nav{
+  padding: 2px 6px 2px 6px;
+  text-decoration: none;
+  color: var(--primary-color);
+  display: inline-block;
+  font-size: larger;
+}
+
+.nav:hover{
+  color: var(--secondary-color);
+}
+
+#greetingsContainer {
+  font-weight: normal;
+  margin: 2rem;
+  width: fit-content;
+}
+
+.typewriter {
+  font-weight: bold;
+  justify-content: left;
+}
+#cursor{
+  animation:Typewriter-cursor 1s infinite;
+}
+
+@keyframes Typewriter-cursor{
+  0%{opacity:0}
+  50%{opacity:1}
+  100%{opacity:0}
+}
