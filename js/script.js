@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', typingText);
 function typingText(){
     const typedTextSpan = document.getElementById('typedText');
 
-    const words = ["Anthony", "A Programmer", "A Software Engineer"];
+    const words = ["Anthony!", "A Software Engineer!", "A coding enthusiast!"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -42,3 +42,14 @@ function typingText(){
     }
     typeEffect();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggles = document.querySelectorAll('.meBtn');
+  
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+});

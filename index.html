@@ -4,28 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="dist/output.css">
     <script src="js/script.js" defer></script>
     
 </head>
 <body>
     <!--Navigation-->
     <div class="flex flex-col md:flex-row gap-2 justify-center text-xl" id="navContainer">
-        <a class="nav transition-transform duration-200 hover:scale-110" id="meTab" href="#meSection">Me</a>
-        <a class="nav transition-transform duration-200 hover:scale-110" id="projectTab" href="#projectSection">Projects</a>
-        <a class="nav transition-transform duration-200 hover:scale-110" id="socialsTab" href="#socialsSection">Socials</a>
+        <a class="nav transition-transform duration-200 hover:scale-110" href="#meSection">Me</a>
+        <a class="nav transition-transform duration-200 hover:scale-110" href="#projectSection">Projects</a>
+        <a class="nav transition-transform duration-200 hover:scale-110" href="#contactSection">Contact</a>
     </div>
+    <br>
     <!--Welcome Message-->
     <div id="greetingsContainer">
-        <span class="text-[clamp(2rem,4vw,4rem)]">Hey! I am</span><br>
-        <span class="typewriter text-[clamp(2.5rem,5vw,8rem)]" id="typedText"></span>
-        <span class="typewriter text-[clamp(2.5rem,5vw,8rem)]" id="cursor">|</span>
+        <span class="text-[clamp(2rem,4vw,5rem)]">Hey! I am</span><br>
+        <span class="typewriter text-[clamp(2.5rem,6vw,8rem)]" id="typedText"></span>
+        <span class="typewriter text-[clamp(2.5rem,6vw,8rem)]" id="cursor">|</span>
     </div>
     <!--About me-->
-    <div id="meSection"></div>
+    <div id="meSection" class="sectionContainer flex flex-col md:flex-row gap-6">
+        <figure id="mePicture" class="w-[clamp(150px,25vw,300px)] shrink-0 mx-auto md:mx-0">
+            <img src="images/myself.JPG">
+        </figure>
+        <div class="textContainer flex-1">
+            <span class="text-[clamp(1.5rem,6vw,5rem)]"> About me </span><br>
+            <div id="meBtnContainer">
+                <button class="meBtn text-[clamp(1.5rem,2vw,2rem)] rounded-xl">Introduction</button>
+                <div class="meBtnText" style="display: none;">
+                    Yo! I'm Anthony, currently a second year CSUMB student in Software Engineering
+                    a member of CSIN3! If I can improve even a single person's life through 
+                    something I build, that impact would make all the effort worthwhile.
+                </div>
+
+                <button class="meBtn text-[clamp(1.5rem,2vw,2rem)] rounded-xl">Languages + Tools + Framworks</button>
+                <div class="meBtnText" style="display: none;">
+                    C++/C, JavaScript, Java, Python, Swift, SQL, HTML/CSS <br><br>
+                    Git, Xcode, VS Code, Terminal<br><br>
+                    SwiftUI, Node.js, Mocha, Docker, PostgreSQL, Express, Chai
+                </div>
+
+                <button class="meBtn text-[clamp(1.5rem,2vw,2rem)] rounded-xl">Hobbies</button>
+                <div class="meBtnText" style="display: none;">
+                    Outside of the screen I love to stay active and spend time outdoors. From strength
+                    training at the gym to long runs, cycling sessions, and both challenging
+                    and scenic hikes, I enjoy pushing my limits while sightseeing. For me, being outside 
+                    is about growth, balance, and fully experiencing life. 
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Projects-->
-    <div id="projectSection"></div>
-    <!--Socials-->
-    <div id="socialsSection"></div>
+    <span id="projectSection" class="text-[clamp(1.5rem,6vw,5rem)]"> Projects </span><br>
+    <span id="projectHint">Click on a project!</span>
+    <div class="sectionContainer grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="https://www.notion.so/StrideScribe-Documentation-30ede2abd6a0807eaf39f86e454ddcaa?source=copy_link" class="projectCardContainer flex flex-row hover:scale-102">
+            <img class="projectPicture rounded-lg" width="144" height="144" src="images/strideScribeIcon.png">
+             <div class="min-w-0 text-left mt-8 mr-8">
+                <span class="text-[clamp(1.5rem,3vw,3rem)]">StrideScribe</span><br>
+                StrideScribe is a GPS-based iOS app for tracking runs and 
+                reviewing workout stats.
+             </div>
+        </a>
+    </div>
+    <!--Contact-->
+    <span id="contactSection" class="text-[clamp(1.5rem,6vw,5rem)]"> Contact </span><br>
+    <span id="projectHint">Click on an icon!</span>
+    <div class="sectionContainer flex flex-col md:flex-row gap-6 justify-center items-center">
+        <a href="mailto:duenezanthony67@gmail.com" target="_blank"><img width="144" height="144" src="https://img.icons8.com/color/144/gmail-new.png" class="textContainer hover:scale-102"></img></a>
+        <a href="https://github.com/anthonyduenez" target="_blank"><img width="144" height="144" src="https://img.icons8.com/ios-filled/150/github.png" class="textContainer hover:scale-102"></img></a>
+        <a href="https://www.linkedin.com/in/anthonyduenezramirez/" target="_blank"><img width="144" height="144" src="https://img.icons8.com/color/144/linkedin.png" class="textContainer hover:scale-102"></img></a>
+        <a href="images/resume.pdf" target="_blank"><img width="144" height="144" src="https://img.icons8.com/office/160/document--v1.png" class="textContainer hover:scale-102"></img></a>
+    </div>
 </body>
 </html>

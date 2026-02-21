@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: 'Junicode';
-  src: url('/font/junicode.ttf') format('truetype');
+  src: url('../font/Junicode.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Junicode';
-  src: url('/font/junicode-Bold.ttf') format('truetype');
+  src: url('../font/Junicode-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Junicode';
-  src: url('/font/junicode-BoldItalic.ttf') format('truetype');
+  src: url('../font/Junicode-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Junicode';
-  src: url('/font/junicode-Italic.ttf') format('truetype');
+  src: url('../font/Junicode-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -39,13 +39,13 @@ body {
   color: var(--primary-color);
   font-family: 'Junicode', serif;
   background-color: var(--primary-bg-color);
-  margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 #navContainer {
   background-color: var(--secondary-bg-color);
-  padding: 20px;
+  padding: 1em;
   text-align: center;
 }
 
@@ -63,14 +63,17 @@ body {
 
 #greetingsContainer {
   font-weight: normal;
-  margin: 2rem;
-  width: fit-content;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  width: 75%;
 }
 
 .typewriter {
   font-weight: bold;
   justify-content: left;
 }
+
 #cursor{
   animation:Typewriter-cursor 1s infinite;
 }
@@ -79,4 +82,68 @@ body {
   0%{opacity:0}
   50%{opacity:1}
   100%{opacity:0}
+}
+
+.sectionContainer {
+  scroll-margin-top: 0px;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.textContainer {
+  background-color: var(--secondary-bg-color);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+#mePicture{
+  border: 12px solid var(--secondary-bg-color);
+  border-radius: 12px;
+  background-color: var(--primary-color);
+  padding: 12px;
+  height:fit-content
+}
+
+.meBtn {
+  background-color: var(--primary-bg-color);
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.meBtn:hover {
+  scale: 102%;
+  animation: ease-in 1s;
+}
+
+.meBtnText {
+  margin: 1rem;
+  padding-left: 8px;
+  text-align: left;
+  border-left-style: solid;
+  border-left-width: 4px;
+  border-color: var(--secondary-color);
+  animation: slideIn 0.3s ease;
+}
+
+#projectHint {
+  color: rgba(209, 207, 192, 0.798);
+}
+
+.projectCardContainer {
+  background-color: var(--secondary-bg-color);
+  border-radius: 12px;
+}
+
+.projectPicture{
+  flex: 1 1 25%;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 12px;
+  margin: 1rem;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
