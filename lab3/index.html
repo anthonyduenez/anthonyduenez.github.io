@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js">
+    </script>    
+</head>
+<body>
+    <h1>Sports Quiz</h1>
+    <hr>
+    <p id="q1">Who was the first ever NBA champion? <img id="q1Image" src=""></p>
+    <div id="q1ChoicesDiv"></div>
+
+    <p id="q2">Name the hockey team in San Jose <img id="q2Image" src=""></p>
+    <input type="text" id="question2">
+
+    <p id="q3">What year was the last Warriors Championship?: <img id="q3Image" src=""></p>
+    <select id="question3">
+        <option value="select">Select</option>
+        <option value="2015">2015</option>
+        <option value="2017">2017</option>
+        <option value="2022">2022</option>
+        <option value="2018">2018</option>
+    </select>
+
+    <p id="q4">How many superbowls have the 49ers won?: <img id="q4Image" src=""></p>
+    <input type="number" id="question4" placeholder="0" max="10" min="1">
+
+    <p id="q5">Name the baseball team in California: <img id="q5Image" src=""></p>
+    <label>
+        <input type="checkbox" id="cb1" value="Dodgers"> Dodgers
+        <input type="checkbox" id="cb2" value="Giants"> Giants
+        <input type="checkbox" id="cb3" value="Athletics"> Athletics
+        <input type="checkbox" id="cb4" value="Padres"> Padres
+    </label>
+    <br>
+    <button>Submit Quiz</button>
+    <div id="results"></div>
+</body>
+</html>
