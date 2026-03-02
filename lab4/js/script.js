@@ -109,5 +109,8 @@ function checkSignup() {
     }
     else if(password != password2) {
         document.querySelector("#signupError").textContent = "Passwords do not match";
+    } else {
+        document.querySelector("#signupError").style.color = "green";
+        document.querySelector("#signupError").textContent = "Signup successful!";
     }
 }
