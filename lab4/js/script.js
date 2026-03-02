@@ -69,9 +69,14 @@ async function displayCity() {
     let response = await fetch(`https://csumb.space/api/cityInfoAPI.php?zip=${zipcode}`);
     let data = await response.json();
 
-    document.querySelector("#cityText").textContent = data.city;
-    document.querySelector("#latitudeText").textContent = data.latitude;
-    document.querySelector("#longitudeText").textContent = data.longitude;  
+    if(data == false) {
+        document.querySelector("#zipcodeError").style.display = "inline";
+    } else {
+        document.querySelector("#zipcodeError").style.display = "none";
+        document.querySelector("#cityText").textContent = data.city;
+        document.querySelector("#latitudeText").textContent = data.latitude;
+        document.querySelector("#longitudeText").textContent = data.longitude;  
+    }
 }
 
 let signupElement = document.querySelector("#submitBtn");
@@ -93,8 +98,10 @@ function checkSignup() {
     let password2 = document.querySelector("#passwordAgain").value;
     document.querySelector("#signupError").style.color = "red";
 
-    alert(password + " " + password2);
-    if(password != password2 && password.length < 6) {
+    if(document.querySelector("#user").value.length < 3) {
+        document.querySelector("#signupError").textContent = "Username must be at least 3 characters";
+    }
+    else if(password != password2 && password.length < 6) {
         document.querySelector("#signupError").textContent = "Passwords do not match and password must be at least 6 characters";
     }
     else if (password.length < 6) {
