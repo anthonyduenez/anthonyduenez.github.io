@@ -1,6 +1,6 @@
 # Anthony Duenez Ramirez Portfolio
 
-This is a personal portfolio/linktree-style website built with React, Vite, and Tailwind CSS. It has a swamp/frog theme with an interactive frog profile section, animated fireflies, project cards, and links to my GitHub, LinkedIn, resume, email, and portfolio projects.
+This is a personal portfolio/linktree-style website built with React, Vite, and Tailwind CSS. It has a swamp/frog theme with an interactive frog profile section, animated fireflies, project cards, and links to my GitHub, LinkedIn, resume, and portfolio projects.
 
 ## What It Is
 
@@ -15,14 +15,6 @@ npm install
 then start the local dev server
 
 npm run dev
-
-then build project
-
-npm run build
-
-preview production build
-
-npm run preview
 
 ## JavaScript Feature
 
