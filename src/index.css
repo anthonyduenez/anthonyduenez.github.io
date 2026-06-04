@@ -5,11 +5,16 @@ body,
 #root {
   min-height: 100%;
   margin: 0;
-  background: #318baa;
+  background: #0b3f52;
+}
+
+html {
+  background: #0b3f52;
 }
 
 body {
   overflow-x: hidden;
+  background: #0b3f52;
 }
 
 .firefly {
