@@ -59,6 +59,7 @@ function ProjectButton({ title, description, href, imgSrc }) {
 export default function PortfolioPage({ onBack }) {
   return (
     <main className="relative overflow-hidden bg-[#318BAA] text-white">
+      //header section
       <section className="relative h-screen min-h-[760px] overflow-hidden">
         <img
           src="/swamp-bg.jpg"
@@ -85,6 +86,7 @@ export default function PortfolioPage({ onBack }) {
         </h1>
       </section>
 
+      //projects section
       <section className="relative min-h-[80vh] w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]">
         <div
           aria-hidden="true"
@@ -96,7 +98,7 @@ export default function PortfolioPage({ onBack }) {
           className="pointer-events-none absolute left-0 top-0 z-[2] h-[28vh] w-full bg-gradient-to-b from-[#318BAA]/70 to-transparent"
         />
       </section>
-
+      
       <div className="absolute left-1/2 top-[46vh] z-20 grid w-full max-w-4xl -translate-x-1/2 grid-cols-1 gap-x-8 gap-y-10 px-6 md:grid-cols-2">
         {PROJECTS.map((project) => (
           <ProjectButton key={project.title} {...project} />
