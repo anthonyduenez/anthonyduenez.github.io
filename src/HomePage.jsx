@@ -1,7 +1,7 @@
-import FrogProfile from "./FrogProfile.jsx";
 import FireflyFrame from "./Firefly.jsx";
-import Links from "./Links.jsx";
+import FrogProfile from "./FrogProfile.jsx";
 import Greeting from "./Greeting.jsx";
+import Links from "./Links.jsx";
 
 export default function HomePage({ onOpenPortfolio }) {
   return (
@@ -21,10 +21,7 @@ export default function HomePage({ onOpenPortfolio }) {
 
         <div
           aria-hidden="true"
-          className="
-            absolute bottom-0 left-0 z-[10] h-[42vh] w-full
-            bg-gradient-to-t from-[#318BAA] via-[#318BAA]/80 to-transparent
-          "
+          className="absolute bottom-0 left-0 z-[10] h-[42vh] w-full bg-gradient-to-t from-[#318BAA] via-[#318BAA]/80 to-transparent"
         />
 
         <Greeting />
@@ -60,26 +57,15 @@ export default function HomePage({ onOpenPortfolio }) {
         </section>
       </section>
 
-      <section
-        className="
-          relative min-h-[60vh] w-full
-          bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]
-        "
-      >
+      <section className="relative min-h-[60vh] w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]">
         <div
           aria-hidden="true"
-          className="
-            pointer-events-none absolute inset-0 z-[1]
-            bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85
-          "
+          className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85"
         />
 
         <div
           aria-hidden="true"
-          className="
-            pointer-events-none absolute left-0 top-0 z-[2] h-[28vh] w-full
-            bg-gradient-to-b from-[#318BAA]/70 to-transparent
-          "
+          className="pointer-events-none absolute left-0 top-0 z-[2] h-[28vh] w-full bg-gradient-to-b from-[#318BAA]/70 to-transparent"
         />
 
         <div className="relative z-20">

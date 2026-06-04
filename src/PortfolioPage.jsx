@@ -1,6 +1,6 @@
 import FrogProfile from "./FrogProfile.jsx";
 
-const projects = [
+const PROJECTS = [
   {
     title: "Steps: Screen Time Control",
     description:
@@ -20,7 +20,7 @@ const projects = [
     description:
       "StrideScribe is a GPS-based iOS app for tracking runs and reviewing workout stats.",
     href: "https://www.notion.so/StrideScribe-Documentation-30ede2abd6a0807eaf39f86e454ddcaa?source=copy_link",
-    imgSrc: "strideScribeIcon.png",
+    imgSrc: "/strideScribeIcon.png",
   },
 ];
 
@@ -30,12 +30,7 @@ function ProjectButton({ title, description, href, imgSrc }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="
-        group relative flex flex-col items-center text-center
-        transition duration-300
-        hover:-translate-y-2 hover:scale-[1.02]
-        focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200/70
-      "
+      className="group relative flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:scale-[1.02] focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200/70"
     >
       <div className="relative flex h-56 w-full items-center justify-center">
         <img
@@ -74,68 +69,36 @@ export default function PortfolioPage({ onBack }) {
 
         <div
           aria-hidden="true"
-          className="
-            absolute bottom-0 left-0 z-[10] h-[42vh] w-full
-            bg-gradient-to-t from-[#318BAA] via-[#318BAA]/80 to-transparent
-          "
+          className="absolute bottom-0 left-0 z-[10] h-[42vh] w-full bg-gradient-to-t from-[#318BAA] via-[#318BAA]/80 to-transparent"
         />
 
         <button
           type="button"
           onClick={onBack}
-          className="
-            absolute left-5 top-5 z-30
-            rounded-full px-6 py-3
-            text-lg font-semibold text-emerald-50
-            drop-shadow
-            transition hover:scale-110
-          "
+          className="absolute left-5 top-5 z-30 rounded-full px-6 py-3 text-lg font-semibold text-emerald-50 drop-shadow transition hover:scale-110"
         >
           ← Back
         </button>
 
-        <h1
-          className="
-            absolute left-1/2 top-[24vh] z-30 w-full -translate-x-1/2 px-6
-            text-center text-5xl font-bold tracking-wide text-emerald-50
-            drop-shadow-2xl sm:text-6xl
-          "
-        >
+        <h1 className="absolute left-1/2 top-[24vh] z-30 w-full -translate-x-1/2 px-6 text-center text-5xl font-bold tracking-wide text-emerald-50 drop-shadow-2xl sm:text-6xl">
           Projects
         </h1>
       </section>
 
-      <section
-        className="
-          relative min-h-[80vh] w-full
-          bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]
-        "
-      >
+      <section className="relative min-h-[80vh] w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]">
         <div
           aria-hidden="true"
-          className="
-            pointer-events-none absolute inset-0 z-[1]
-            bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85
-          "
+          className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85"
         />
 
         <div
           aria-hidden="true"
-          className="
-            pointer-events-none absolute left-0 top-0 z-[2] h-[28vh] w-full
-            bg-gradient-to-b from-[#318BAA]/70 to-transparent
-          "
+          className="pointer-events-none absolute left-0 top-0 z-[2] h-[28vh] w-full bg-gradient-to-b from-[#318BAA]/70 to-transparent"
         />
       </section>
 
-      <div
-        className="
-          absolute left-1/2 top-[46vh] z-20 grid w-full max-w-4xl
-          -translate-x-1/2 grid-cols-1 gap-x-8 gap-y-10 px-6
-          md:grid-cols-2
-        "
-      >
-        {projects.map((project) => (
+      <div className="absolute left-1/2 top-[46vh] z-20 grid w-full max-w-4xl -translate-x-1/2 grid-cols-1 gap-x-8 gap-y-10 px-6 md:grid-cols-2">
+        {PROJECTS.map((project) => (
           <ProjectButton key={project.title} {...project} />
         ))}
       </div>
