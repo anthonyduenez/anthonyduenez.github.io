@@ -58,57 +58,53 @@ function ProjectButton({ title, description, href, imgSrc }) {
 
 export default function PortfolioPage({ onBack }) {
   return (
-    <main className="relative overflow-hidden bg-[#318BAA] text-white">
-      //header section
-      <section className="relative h-screen min-h-[760px] overflow-hidden">
-        <img
-          src="/swamp-bg.jpg"
-          alt=""
-          aria-hidden="true"
-          className="absolute left-0 top-[-10vh] h-[108%] w-full object-cover object-[center_75%]"
-        />
-
-        <div
-          aria-hidden="true"
-          className="absolute bottom-0 left-0 z-[10] h-[42vh] w-full bg-gradient-to-t from-[#318BAA] via-[#318BAA]/80 to-transparent"
-        />
-
-        <button
-          type="button"
-          onClick={onBack}
-          className="absolute left-5 top-5 z-30 rounded-full px-6 py-3 text-lg font-semibold text-emerald-50 drop-shadow transition hover:scale-110"
-        >
-          ← Back
-        </button>
-
-        <h1 className="absolute left-1/2 top-[24vh] z-30 w-full -translate-x-1/2 px-6 text-center text-5xl font-bold tracking-wide text-emerald-50 drop-shadow-2xl sm:text-6xl">
-          Projects
-        </h1>
-      </section>
-
-      //projects section
-      <section className="relative min-h-[80vh] w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85"
-        />
-
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-0 top-0 z-[2] h-[28vh] w-full bg-gradient-to-b from-[#318BAA]/70 to-transparent"
-        />
-      </section>
-      
-      <div className="absolute left-1/2 top-[46vh] z-20 grid w-full max-w-4xl -translate-x-1/2 grid-cols-1 gap-x-8 gap-y-10 px-6 md:grid-cols-2">
-        {PROJECTS.map((project) => (
-          <ProjectButton key={project.title} {...project} />
-        ))}
-      </div>
+    <main className="relative min-h-screen overflow-hidden bg-[#318BAA] text-white">
+      <img
+        src="/swamp-bg.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute left-0 top-[-10vh] h-[108vh] w-full object-cover object-[center_75%]"
+      />
 
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-[15] bg-black/30"
       />
+
+      <div
+        aria-hidden="true"
+        className="absolute left-0 top-0 z-[10] h-[90vh] w-full bg-gradient-to-t from-[#318BAA] via-[#318BAA]/20 to-transparent"
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute left-0 top-[90vh] z-[10] min-h-[120vh] w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]"
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute left-0 top-[90vh] z-[11] min-h-[120vh] w-full bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85"
+      />
+
+      <button
+        type="button"
+        onClick={onBack}
+        className="absolute left-5 top-5 z-30 rounded-full px-6 py-3 text-lg font-semibold text-emerald-50 drop-shadow transition hover:scale-110"
+      >
+        ← Back
+      </button>
+
+      <section className="relative z-20 mx-auto flex min-h-screen w-full max-w-4xl flex-col items-center px-6 pb-24 pt-[24vh] text-center">
+        <h1 className="text-5xl font-bold tracking-wide text-emerald-50 drop-shadow-2xl sm:text-6xl">
+          Projects
+        </h1>
+
+        <div className="mt-30 grid w-full grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2">
+          {PROJECTS.map((project) => (
+            <ProjectButton key={project.title} {...project} />
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

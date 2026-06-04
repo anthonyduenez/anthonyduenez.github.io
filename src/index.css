@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  background: #318baa;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .firefly {
   position: absolute;
   z-index: 20;

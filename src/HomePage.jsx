@@ -25,7 +25,7 @@ export default function HomePage({ onOpenPortfolio }) {
         />
 
         <Greeting />
-        // Profile Section
+        {/* Profile Section */}
         <section className="relative z-20 mx-auto flex h-full max-w-md flex-col items-center px-6 pt-[32vh] text-center">
           <div className="relative flex items-center justify-center">
             <img
@@ -57,7 +57,7 @@ export default function HomePage({ onOpenPortfolio }) {
         </section>
       </section>
 
-      // Links Section
+      {/* Links Section*/}
       <section className="relative min-h-[60vh] w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]">
         <div
           aria-hidden="true"

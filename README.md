@@ -1,16 +1,39 @@
-# React + Vite
+# Anthony Duenez Ramirez Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio/linktree-style website built with React, Vite, and Tailwind CSS. It has a swamp/frog theme with an interactive frog profile section, animated fireflies, project cards, and links to my GitHub, LinkedIn, resume, email, and portfolio projects.
 
-Currently, two official plugins are available:
+## What It Is
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This site acts as a personal landing page where people can view my projects and find ways to contact me. The home page has a frog sitting on a lily pad, a time-based greeting, and buttons styled like lily pads. The portfolio page keeps the same visual style but shows my projects as frog/lily-pad cards.
 
-## React Compiler
+## How to Run It
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+First, install the project dependencies:
 
-## Expanding the ESLint configuration
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+then start the local dev server
+
+npm run dev
+
+then build project
+
+npm run build
+
+preview production build
+
+npm run preview
+
+## JavaScript Feature
+
+One JavaScript feature I added is the interactive frog behavior. The frog can open and close its mouth, and after the mouth is closed, you can rub the frog to make it blush.
+
+I picked this feature because it makes the portfolio feel more playful and I really like how my frog turned out so he deserves some love.
+
+The trickiest part about this was mistakingly hand drawing the background in 1920x1080, I had to add gradients and making sure it blended well enough to not be obvious. This also messed up the layout of buttons because technically the extra space was a different section, and it took me a while to find a workaround. 
+
+## Tech Used
+React
+Vite
+Tailwind CSS
+JavaScript

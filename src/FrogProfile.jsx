@@ -60,7 +60,7 @@ export default function FrogProfile({ imgSrc = "/headshot.PNG" }) {
         className="absolute inset-0 h-full w-full object-contain transition-transform duration-200 active:scale-95"
       />
 
-      // Blush effect
+      {/* Blush effect */}
       <span
         aria-hidden="true"
         className={`
