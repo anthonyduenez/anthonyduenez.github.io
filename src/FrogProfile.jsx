@@ -2,13 +2,13 @@ import { useState } from "react";
 
 const RUBS_TO_BLUSH = 8;
 
-export default function FrogProfile({ imgSrc = "/headshot.PNG" }) {
+export default function FrogProfile({ imgSrc = "/headshot.PNG", isInteractive = true}) {
   const [isClosed, setIsClosed] = useState(false);
   const [isBlushing, setIsBlushing] = useState(false);
   const [rubCount, setRubCount] = useState(0);
 
   function handleRub() {
-    if (!isClosed) return;
+    if (!isClosed || !isInteractive) return;
 
     setRubCount((currentCount) => {
       const nextCount = currentCount + 1;
@@ -22,6 +22,8 @@ export default function FrogProfile({ imgSrc = "/headshot.PNG" }) {
   }
 
   function handleToggleMouth() {
+    if (!isInteractive) return;
+    
     setIsClosed((currentValue) => {
       const nextValue = !currentValue;
 

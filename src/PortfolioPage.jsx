@@ -41,7 +41,7 @@ function ProjectButton({ title, description, href, imgSrc }) {
         />
 
         <div className="relative z-10 scale-90 transition duration-300 group-hover:scale-95">
-          <FrogProfile imgSrc={imgSrc} />
+          <FrogProfile imgSrc={imgSrc} isInteractive={false} />
         </div>
       </div>
 
