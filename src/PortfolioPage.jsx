@@ -4,23 +4,30 @@ const PROJECTS = [
   {
     title: "Steps: Screen Time Control",
     description:
-      "Steps is an iOS app that motivates users achieve their daily steps goal by locking away their apps.",
+      "IOS app that motivates users achieve their daily steps goal by locking away their apps.",
     href: "https://apps.apple.com/us/app/steps-screen-time-control/id6755275144",
     imgSrc: "/stepsIcon.png",
   },
   {
     title: "Ethocal",
     description:
-      "Ethocal is a mobile application designed to allow people to easily discover local yard sales, thrift stores, and ethical brands.",
+      "Mobile application designed to allow people to easily discover local yard sales, thrift stores, and ethical brands.",
     href: "https://devpost.com/software/ethocal",
     imgSrc: "/ethocalIcon.jpg",
   },
   {
     title: "StrideScribe",
     description:
-      "StrideScribe is a GPS-based iOS app for tracking runs and reviewing workout stats.",
+      "GPS-based iOS app for tracking runs and reviewing workout stats.",
     href: "https://www.notion.so/StrideScribe-Documentation-30ede2abd6a0807eaf39f86e454ddcaa?source=copy_link",
     imgSrc: "/strideScribeIcon.png",
+  },
+  {
+    title: "AlphaTurring",
+    description:
+      "An autonomous search-and-rescue robot combining YOLO computer vision, Gemini Robotics ER, and real-time multimodal voice to locate survivors, guide first aid, and alert responders.",
+    href: "https://lnkd.in/gAPRv6Qk",
+    imgSrc: "/alphaTurringIcon.jpg",
   },
 ];
 
