@@ -23,10 +23,10 @@ const PROJECTS = [
     imgSrc: "/strideScribeIcon.png",
   },
   {
-    title: "AlphaTurring",
+    title: "AlphaTuring",
     description:
-      "An autonomous search-and-rescue robot combining YOLO computer vision, Gemini Robotics ER, and real-time multimodal voice to locate survivors, guide first aid, and alert responders.",
-    href: "https://lnkd.in/gAPRv6Qk",
+      "An autonomous search-and-rescue robot to locate survivors, guide first aid, and alert responders.",
+    href: "https://devpost.com/software/alphaturing",
     imgSrc: "/alphaTurringIcon.jpg",
   },
 ];
