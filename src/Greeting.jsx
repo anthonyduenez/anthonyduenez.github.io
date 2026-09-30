@@ -22,7 +22,7 @@ export default function Greeting() {
   }, []);
 
   return (
-    <h2 className="absolute left-1/2 top-[16vh] z-20 w-full -translate-x-1/2 px-6 text-center text-5xl font-bold tracking-wide text-emerald-50 drop-shadow-2xl sm:text-6xl">
+    <h2 className="absolute left-1/2 top-[11vh] z-20 w-full -translate-x-1/2 px-6 text-center text-xs font-semibold uppercase tracking-[0.35em] text-emerald-50/75 drop-shadow sm:text-sm">
       {greeting}
     </h2>
   );

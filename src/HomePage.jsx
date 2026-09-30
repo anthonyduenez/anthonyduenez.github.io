@@ -11,7 +11,7 @@ export default function HomePage({ onOpenPortfolio }) {
         className="pointer-events-none absolute inset-0 z-[15] bg-black/30"
       />
 
-      <section className="relative h-screen min-h-[760px] overflow-hidden">
+      <section className="relative min-h-[700px] overflow-hidden sm:min-h-[760px]">
         <img
           src="/swamp-bg.jpg"
           alt=""
@@ -26,7 +26,7 @@ export default function HomePage({ onOpenPortfolio }) {
 
         <Greeting />
         {/* Profile Section */}
-        <section className="relative z-20 mx-auto flex h-full max-w-md flex-col items-center px-6 pt-[32vh] text-center">
+        <section className="relative z-20 mx-auto flex min-h-[700px] max-w-xl flex-col items-center px-6 pb-16 pt-[23vh] text-center sm:min-h-[760px]">
           <div className="relative flex items-center justify-center">
             <img
               src="/lilypad.png"
@@ -43,22 +43,22 @@ export default function HomePage({ onOpenPortfolio }) {
           </div>
 
           <p className="mt-3 text-xs font-medium tracking-wide text-emerald-50/65 drop-shadow">
-            click then rub
+            tap to wake · rub to cheer up
           </p>
 
-          <h1 className="mt-12 text-3xl font-semibold drop-shadow-lg">
+          <h1 className="mt-8 text-3xl font-semibold drop-shadow-lg sm:text-4xl">
             Anthony Duenez Ramirez
           </h1>
 
-          <p className="mt-3 max-w-sm text-sm leading-6 text-emerald-50 drop-shadow">
-            Friendly neighborhood Software Engineer student who loves building
-            projects and trying new technologies.
+          <p className="mt-4 max-w-lg text-base leading-7 text-emerald-50 drop-shadow">
+            Software engineering student building playful, useful software for
+            phones, communities, and robots.
           </p>
         </section>
       </section>
 
       {/* Links Section*/}
-      <section className="relative min-h-[60vh] w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52]">
+      <section className="relative w-full bg-gradient-to-b from-[#318BAA] via-[#1D6F87] to-[#0B3F52] py-16 sm:py-20">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85"

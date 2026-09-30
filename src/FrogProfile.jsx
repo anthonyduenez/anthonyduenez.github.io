@@ -5,7 +5,7 @@ const RUBS_TO_BLUSH = 8;
 export default function FrogProfile({ imgSrc = "/headshot.PNG", isInteractive = true}) {
   const [isClosed, setIsClosed] = useState(false);
   const [isBlushing, setIsBlushing] = useState(false);
-  const [rubCount, setRubCount] = useState(0);
+  const [, setRubCount] = useState(0);
 
   function handleRub() {
     if (!isClosed || !isInteractive) return;
