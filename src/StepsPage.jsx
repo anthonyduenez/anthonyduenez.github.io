@@ -203,14 +203,14 @@ export default function StepsPage({ onBack }) {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3 sm:gap-6">
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
             {APP_SCREENS.map((screen) => (
               <figure key={screen.title}>
                 <div className="overflow-hidden rounded-[1.5rem] bg-[#183f54] p-2 shadow-xl shadow-[#183f54]/20 ring-1 ring-[#315b50]/15 sm:p-3">
                   <img
                     src={screen.image}
                     alt={`${screen.title} screen in Steps`}
-                    className="aspect-[1284/2778] w-full rounded-[1rem] object-cover"
+                    className="aspect-[591/1280] w-full rounded-[1rem] object-cover"
                   />
                 </div>
                 <figcaption className="mt-4">
