@@ -8,26 +8,29 @@ const PROJECTS = [
     imgSrc: "/stepsCover.png",
     imgAlt: "Steps app artwork showing a walking path and the app character",
     imageClassName: "object-cover",
+    action: "steps",
   },
   {
     title: "Ethocal",
-    category: "Mobile marketplace",
+    category: "Product design · Figma prototype",
     description:
-      "Mobile application designed to allow people to easily discover local yard sales, thrift stores, and ethical brands.",
+      "A mobile marketplace concept for discovering local yard sales, thrift stores, and ethical brands.",
     href: "https://devpost.com/software/ethocal",
-    imgSrc: "/ethocalIcon.jpg",
-    imgAlt: "Ethocal app icon",
+    imgSrc: "/ethocal-hero.png",
+    imgAlt: "Ethocal logo beside two mobile app screens",
     imageClassName: "object-cover",
+    action: "ethocal",
   },
   {
     title: "StrideScribe",
-    category: "iOS app · Fitness",
+    category: "Fitness · Running tracker",
     description:
       "GPS-based iOS app for tracking runs and reviewing workout stats.",
     href: "https://www.notion.so/StrideScribe-Documentation-30ede2abd6a0807eaf39f86e454ddcaa?source=copy_link",
     imgSrc: "/strideScribeCover.png",
     imgAlt: "StrideScribe artwork showing a runner on a route",
     imageClassName: "object-cover",
+    action: "stridescribe",
   },
   {
     title: "AlphaTuring",
@@ -36,8 +39,9 @@ const PROJECTS = [
       "Software for an autonomous search-and-rescue robot that locates survivors, guides first aid, and alerts responders.",
     href: "https://devpost.com/software/alphaturing",
     imgSrc: "/alphaTurringIcon.jpg",
-    imgAlt: "AlphaTuring search-and-rescue software project",
+    imgAlt: "AlphaTuring rover platform used by the software project",
     imageClassName: "object-cover",
+    action: "alphaturing",
   },
 ];
 
@@ -49,15 +53,14 @@ function ProjectCard({
   imgSrc,
   imgAlt,
   imageClassName,
+  onOpen,
 }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="group flex flex-col overflow-hidden rounded-[2rem] bg-[#0b3f52]/80 text-left shadow-2xl shadow-black/25 ring-1 ring-emerald-100/15 backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:bg-[#0b3f52]/95 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200/70"
-    >
-      <div className="relative aspect-[16/10] overflow-hidden bg-[#dce9d4]">
+  const cardClassName =
+    "group flex flex-col overflow-hidden rounded-[2rem] bg-[#0b3f52]/80 text-left shadow-2xl shadow-black/25 ring-1 ring-emerald-100/15 backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:bg-[#0b3f52]/95 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200/70";
+
+  const content = (
+    <>
+      <div className="relative aspect-[16/9] overflow-hidden bg-[#dce9d4] sm:aspect-[16/10]">
         <img
           src={imgSrc}
           alt={imgAlt}
@@ -69,25 +72,50 @@ function ProjectCard({
         </span>
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#dfff8f]/80">
           {category}
         </p>
-        <h2 className="mt-3 text-2xl font-semibold text-emerald-50 drop-shadow-lg">
+        <h2 className="mt-3 text-lg font-semibold text-emerald-50 drop-shadow-lg sm:text-xl">
           {title}
         </h2>
         <p className="mt-3 flex-1 text-sm leading-6 text-emerald-50/80">
           {description}
         </p>
-        <span className="mt-6 text-sm font-semibold text-[#dfff8f]">
+        <span className="mt-5 text-sm font-semibold text-[#dfff8f]">
           View project <span aria-hidden="true">↗</span>
         </span>
       </div>
+    </>
+  );
+
+  if (onOpen) {
+    return (
+      <button type="button" onClick={onOpen} className={cardClassName}>
+        {content}
+      </button>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className={cardClassName}
+    >
+      {content}
     </a>
   );
 }
 
-export default function PortfolioPage({ onBack }) {
+export default function PortfolioPage({
+  onBack,
+  onOpenSteps,
+  onOpenStrideScribe,
+  onOpenAlphaTuring,
+  onOpenEthocal,
+}) {
   return (
     <main className="relative min-h-[100svh] overflow-hidden bg-[#0B3F52] text-white">
       <img
@@ -117,7 +145,7 @@ export default function PortfolioPage({ onBack }) {
         className="absolute left-0 top-[90vh] z-[11] min-h-[120vh] w-full bg-gradient-to-b from-transparent via-[#0E5066]/35 to-[#062F3F]/85"
       />
 
-      <div className="relative z-20 mx-auto w-full max-w-6xl px-6 pb-24">
+      <div className="relative z-20 mx-auto w-full max-w-5xl px-6 pb-24">
         <header className="pt-6">
           <button
             type="button"
@@ -141,9 +169,23 @@ export default function PortfolioPage({ onBack }) {
           </div>
         </header>
 
-        <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <section className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
           {PROJECTS.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <ProjectCard
+              key={project.title}
+              {...project}
+              onOpen={
+                project.action === "steps"
+                  ? onOpenSteps
+                  : project.action === "stridescribe"
+                  ? onOpenStrideScribe
+                  : project.action === "alphaturing"
+                  ? onOpenAlphaTuring
+                  : project.action === "ethocal"
+                  ? onOpenEthocal
+                  : undefined
+              }
+            />
           ))}
         </section>
       </div>
