@@ -6,6 +6,7 @@ import HomePage from "./HomePage.jsx";
 import PortfolioPage from "./PortfolioPage.jsx";
 import StepsPage from "./StepsPage.jsx";
 import StrideScribePage from "./StrideScribePage.jsx";
+import VaultAIPage from "./VaultAIPage.jsx";
 
 const PAGES = {
   HOME: "home",
@@ -14,6 +15,7 @@ const PAGES = {
   STRIDESCRIBE: "stridescribe",
   ALPHATURING: "alphaturing",
   ETHOCAL: "ethocal",
+  VAULTAI: "vaultai",
 };
 
 export default function App() {
@@ -31,6 +33,7 @@ export default function App() {
         onOpenStrideScribe={() => setPage(PAGES.STRIDESCRIBE)}
         onOpenAlphaTuring={() => setPage(PAGES.ALPHATURING)}
         onOpenEthocal={() => setPage(PAGES.ETHOCAL)}
+        onOpenVaultAI={() => setPage(PAGES.VAULTAI)}
       />
     );
   }
@@ -45,6 +48,10 @@ export default function App() {
 
   if (page === PAGES.ETHOCAL) {
     return <EthocalPage onBack={() => setPage(PAGES.PORTFOLIO)} />;
+  }
+
+  if (page === PAGES.VAULTAI) {
+    return <VaultAIPage onBack={() => setPage(PAGES.PORTFOLIO)} />;
   }
 
   if (page === PAGES.STRIDESCRIBE) {

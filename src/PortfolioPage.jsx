@@ -1,5 +1,16 @@
 const PROJECTS = [
   {
+    title: "VaultAI",
+    category: "AI · Privacy · Document intelligence",
+    description:
+      "A privacy-first local AI system that turns business documents into verified, reviewable records without sending sensitive data to the cloud.",
+    href: "https://devpost.com/software/vaultai-upg79r",
+    imgSrc: "/vaultai-cover.svg",
+    imgAlt: "VaultAI local document intelligence cover",
+    imageClassName: "object-cover",
+    action: "vaultai",
+  },
+  {
     title: "Steps: Screen Time Control",
     category: "Health · Digital wellbeing",
     description:
@@ -115,6 +126,7 @@ export default function PortfolioPage({
   onOpenStrideScribe,
   onOpenAlphaTuring,
   onOpenEthocal,
+  onOpenVaultAI,
 }) {
   return (
     <main className="relative min-h-[100svh] overflow-hidden bg-[#0B3F52] text-white">
@@ -163,8 +175,9 @@ export default function PortfolioPage({
               Selected work
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-emerald-50/80 sm:text-lg">
-              From iOS apps to robotics software, these projects are how I like
-              to turn useful ideas into something people can interact with.
+              From iOS apps and local AI to robotics software, these projects
+              are how I like to turn useful ideas into something people can
+              interact with.
             </p>
           </div>
         </header>
@@ -183,6 +196,8 @@ export default function PortfolioPage({
                   ? onOpenAlphaTuring
                   : project.action === "ethocal"
                   ? onOpenEthocal
+                  : project.action === "vaultai"
+                  ? onOpenVaultAI
                   : undefined
               }
             />

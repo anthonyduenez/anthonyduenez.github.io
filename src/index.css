@@ -7,7 +7,6 @@ body,
   margin: 0;
   background: #0b3f52;
 }
-
 html {
   background: #0b3f52;
 }
@@ -91,25 +90,4 @@ body {
     transform: translate(-8px, 10px) scale(0.8);
     opacity: 0.25;
   }
-}
-
-@keyframes frogTongue {
-  0% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-
-  35% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-}
-
-.animate-frogTongue {
-  animation: frogTongue 450ms ease-in-out forwards;
 }

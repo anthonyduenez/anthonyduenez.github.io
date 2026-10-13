@@ -27,7 +27,6 @@ const lilypadButtonClassName = `
 `;
 
 function LilypadButton({ children, href, onClick, featured = false }) {
-  const isMailLink = href?.startsWith("mailto:");
   const buttonClassName = `${lilypadButtonClassName} ${
     featured ? "ring-2 ring-[#dfff8f]/70 ring-offset-2 ring-offset-[#1D6F87]" : ""
   }`;
@@ -64,8 +63,8 @@ function LilypadButton({ children, href, onClick, featured = false }) {
   return (
     <a
       href={href}
-      target={isMailLink ? undefined : "_blank"}
-      rel={isMailLink ? undefined : "noreferrer"}
+      target="_blank"
+      rel="noreferrer"
       className={buttonClassName}
     >
       {content}

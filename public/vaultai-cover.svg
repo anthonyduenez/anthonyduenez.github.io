@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">VaultAI cover</title>
+  <desc id="description">VaultAI local document intelligence with verified action.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1b2d" />
+      <stop offset="1" stop-color="#183452" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#203b5b" />
+      <stop offset="1" stop-color="#142942" />
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#9ab0c8" stroke-opacity="0.08" />
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#06101d" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#background)" />
+  <rect width="1600" height="1000" fill="url(#grid)" />
+  <circle cx="1310" cy="80" r="360" fill="#2dd4bf" opacity="0.08" />
+  <circle cx="120" cy="900" r="260" fill="#2f7de1" opacity="0.08" />
+
+  <g transform="translate(130 130)">
+    <path d="M70 0 0 26v48c0 43 30 79 70 90 40-11 70-47 70-90V26L70 0Z" fill="#2dd4bf" fill-opacity="0.14" stroke="#2dd4bf" stroke-width="5" />
+    <circle cx="70" cy="74" r="31" fill="none" stroke="#2dd4bf" stroke-width="8" />
+    <circle cx="70" cy="74" r="8" fill="#2dd4bf" />
+    <path d="M70 37v11M70 100v11M33 74h11M96 74h11" stroke="#2dd4bf" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <text x="130" y="390" fill="#8ca2bb" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="30" font-weight="700" letter-spacing="7">LOCAL-FIRST AI</text>
+  <text x="130" y="500" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="100" font-weight="750" letter-spacing="-3">VaultAI</text>
+  <text x="130" y="570" fill="#d8e5f2" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="38">Private documents.</text>
+  <text x="130" y="620" fill="#2dd4bf" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="700">Verified action.</text>
+
+  <g transform="translate(840 120)" filter="url(#shadow)">
+    <rect width="610" height="700" rx="28" fill="url(#panel)" stroke="#54718f" stroke-opacity="0.5" stroke-width="2" />
+    <text x="46" y="66" fill="#9ab0c8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="700" letter-spacing="3">DOCUMENT WORKSPACE</text>
+    <rect x="46" y="102" width="518" height="92" rx="14" fill="#294969" />
+    <circle cx="82" cy="148" r="18" fill="#2dd4bf" fill-opacity="0.18" stroke="#2dd4bf" stroke-width="2" />
+    <path d="M74 148h16M82 140v16" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" />
+    <text x="116" y="140" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="24" font-weight="650">Invoice_0142.pdf</text>
+    <text x="116" y="169" fill="#9ab0c8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18">Verified record · ready to review</text>
+
+    <text x="46" y="250" fill="#9ab0c8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="2">EXTRACTED FIELDS</text>
+    <rect x="46" y="278" width="244" height="84" rx="12" fill="#14263d" />
+    <text x="70" y="313" fill="#8299b3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16">TOTAL</text>
+    <text x="70" y="343" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700">$1,240.00</text>
+    <rect x="320" y="278" width="244" height="84" rx="12" fill="#14263d" />
+    <text x="344" y="313" fill="#8299b3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16">CONFIDENCE</text>
+    <text x="344" y="343" fill="#2dd4bf" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700">98.69%</text>
+
+    <rect x="46" y="412" width="518" height="2" fill="#54718f" opacity="0.5" />
+    <text x="46" y="470" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="24" font-weight="650">Human review stays in control</text>
+    <text x="46" y="515" fill="#9ab0c8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="19">Evidence-backed extraction</text>
+    <text x="46" y="552" fill="#9ab0c8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="19">Local processing</text>
+    <text x="46" y="589" fill="#9ab0c8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="19">Auditable export</text>
+    <rect x="46" y="630" width="160" height="38" rx="19" fill="#0f9480" />
+    <text x="126" y="655" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="700">LOCAL ONLY</text>
+  </g>
+</svg>
